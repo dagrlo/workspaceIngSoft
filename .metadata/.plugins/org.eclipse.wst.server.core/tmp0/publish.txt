@@ -1,0 +1,5 @@
+#GlassFish 3
+#Wed Nov 05 19:24:12 CET 2014
+org.eclipse.jst.jee.server\:isw_app3=/home/isaw/opt/glassfish-4.1/glassfish/domains/domain1/eclipseApps/isw_app3
+org.eclipse.jst.jee.server\:isw_app1=/home/isaw/opt/glassfish-4.1/glassfish/domains/domain1/eclipseApps/isw_app1
+org.eclipse.jst.jee.server\:mi_ISW_APP4=/home/isaw/opt/glassfish-4.1/glassfish/domains/domain1/eclipseApps/mi_ISW_APP4

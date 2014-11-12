@@ -1,0 +1,5 @@
+eclipse.preferences.version=1
+externalMigrateFromAuthorizationDatabase/isMigrated=true
+migrateFromAuthorizationDatabase/isMigrated=true
+repositories/3040ebe7085a00141081ce359450f814=3040ebe7085a00141081ce359450f814;https\://xtrempro.uv.es/svn/isw_repo;https\://xtrempro.uv.es/svn/isw_repo;branches;tags;trunk;true;8b3a8047-1f94-4d90-a739-f7a95eb10aa3;https\://xtrempro.uv.es/svn/isw_repo;;false;;;0
+repositories/c032632c3f580014126385088bf4811b=c032632c3f580014126385088bf4811b;svn+ssh\://david@xtrempro.uv.es/home/david/svn/;svn+ssh\://david@xtrempro.uv.es/home/david/svn/;branches;tags;trunk;true;05aaf554-7f1d-4a1c-84b2-44e59756fc8c;svn+ssh\://david@xtrempro.uv.es/home/david/svn;;false;;;0
