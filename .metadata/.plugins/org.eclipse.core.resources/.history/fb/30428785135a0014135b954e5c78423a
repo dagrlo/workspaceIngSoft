@@ -1,8 +1,0 @@
-package es.uv.isw.app1.beans;
-
-public class MailingBFactory {
-	public static MailingBeanOLD newInstance(){
-		return new MailingBeanImpl();
-	}
-
-}

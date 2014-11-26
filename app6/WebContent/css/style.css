@@ -1,0 +1,195 @@
+@CHARSET "UTF-8";
+
+body {
+    color: #000000;
+    font-family: Verdana;
+    font-size: 10pt;
+}
+
+hr {
+    color: #8A624F;
+}
+
+table.head {
+    table-layout: fixed;
+    margin: 0pt;
+    border: 0pt;
+    padding: 0pt;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td.head {
+    padding: 2pt;
+    margin: 0pt;
+    color: #8A624F;
+    font-family: Arial;
+    font-size: 48pt;
+    font-weight: bold;
+    text-decoration: overline;
+    vertical-align: middle;
+}
+
+tr.head {
+    padding: 0pt;
+    margin: 0pt;
+    vertical-align: middle;
+}
+
+table.footer {
+    table-layout: fixed;
+    margin: 0pt;
+    border: 0pt;
+    padding: 0pt;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td.footer {
+    padding: 0pt;
+    margin: 0pt;
+    color: #8A624F;
+    font-family: Arial;
+    font-size: 10pt;
+}
+
+h1 {
+    color: #8A624F;
+    font-family: "Times New-Roman";
+    text-align: center;
+}
+
+div.body {
+    background-color: #FEFEF2;
+    border: 2px solid #8A624F;
+}
+		
+div.footer {
+    background-color: #FEFEF2;
+    border: 2px solid #8A624F;
+}
+
+table.menu {
+	  table-layout: fixed;
+		width: 100%;
+    border: 0px;
+    padding: 0px;
+    margin: 0px;
+}
+
+td.menu {
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    font-family: Arial;
+    font-size: 10pt;
+    font-weight: bold;
+    text-align: center;
+    color: #FFFFC0;
+    background-color: #F4CA4A;
+}
+
+td.menuoff {
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    font-family: Arial;
+    font-size: 10pt;
+    font-weight: bold;
+    text-align: center;
+    /*color: #FFFFC0;*/
+    color: #F4CA4A;
+    /*background-color: #8A624F;*/
+    background-color:  #294380;
+}
+
+tr.menu {
+    border: 0px;
+    padding: 0px;
+    margin: 0px;
+}
+
+td.menus {
+    padding: 2pt;
+    margin: 0pt;
+    font-family: Arial;
+    font-size: 10pt;
+    font-weight: bold;
+    text-align: center;
+    color: #F4CA4A;
+    border: 2px solid #8A624F;
+    background-color: #8A624F;
+}
+
+table.body {
+    margin: 0px;
+    border: 2px solid #8A624F;
+    padding: 3px 7px 3px 7px;
+    width: 90%;
+    margin-right: 5%;
+    margin-left: 5%;
+    border-collapse: collapse;
+}
+
+td.body {
+    border: 1px solid #8A624F;
+}
+
+th.body {
+		font-size: 10pt;
+		background-color: #F4CA4A;
+    color: #FFFFC0;
+    border: 1px solid #8A624F;
+}
+
+/******************************************************************
+ Ejemplo de menu vertical y horizontal. 
+
+ Fuente:
+
+      http://www.redribera.es/formacion/tutoriales/viewfile.html?file=htmlmenus1008-3.xml#
+
+ Uso:
+
+    <ul id="menuList">
+      <li><a href='#' rel='nofollow'>Elemento de menú 1</a></li>
+      <li><a href='#' rel='nofollow'>Elemento de menú 2</a></li>
+      <li><a href='#' rel='nofollow'>Elemento de menú 3</a></li>
+    </ul> 
+
+    <ul id="menuListHoriz">
+      <li><a href='#' rel='nofollow'>Elemento de menú 1</a></li>
+      <li><a href='#' rel='nofollow'>Elemento de menú 2</a></li>
+      <li><a href='#' rel='nofollow'>Elemento de menú 3</a></li>
+    </ul> 
+
+******************************************************************/
+#menuList {
+  margin: 2px;
+  padding: 0px;
+  line-height:0px;
+  min-width:auto;
+}
+
+#menuList li {
+  display: block; /* De este modo los elementos del menú se mostrán como bloques uno debajo de otro y hasta el ancho del menú */
+  margin: 0px;
+  padding: 0;
+  list-style: none;
+}
+
+#menuList li a, #menuList1 li a:focus {
+  display: block;
+  margin: 0px;
+  text-decoration: none;
+  color: #294380;
+  font-family: Verdana,Arial,Helvetica;
+  font-size: 12px;
+  font-weight:bold;
+  padding: 15px;/* Cuanto mayor sea el espaciado, mas grande será el area del botón. */
+}
+
+#menuList li a:hover {
+  background-color: #8A624F;
+  color: #F4CA4A;
+}
