@@ -1,0 +1,108 @@
+package es.uv.isw.app4.filters;
+
+import java.io.IOException;
+
+import javax.servlet.Filter;
+import javax.servlet.FilterChain;
+import javax.servlet.FilterConfig;
+import javax.servlet.ServletException;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
+import javax.servlet.annotation.WebFilter;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
+import es.uv.isw.app4.beans.UserBean;
+
+/**
+ * Servlet Filter implementation class LoginFilter
+ */
+@WebFilter("/*")
+public class LoginFilter implements Filter {
+	private static final long serialVersionUID = 1L;
+	private static final String USERNAME_PARAM = "username";
+	private static final String PASSWORD_PARAM = "password";
+	private static final String USERBEAN_ATTR = "userbean";
+	private static final String CONTROLLER_PREFIX = "/pages";
+
+    /**
+     * Default constructor. 
+     */
+    public LoginFilter() {
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see Filter#destroy()
+	 */
+	public void destroy() {
+		// TODO Auto-generated method stub
+	}
+
+	/**
+	 * @see Filter#doFilter(ServletRequest, ServletResponse, FilterChain)
+	 */
+	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
+		
+			System.out.println("Dentro del filtro");
+			String nextPage="/login.jsp";
+			boolean result=false;
+			//String nextPage = ((HttpServletRequest) request).getPathInfo().replaceAll(CONTROLLER_PREFIX,"");
+			//boolean result = false;
+
+			//System.out.println("NextPage:"+nextPage);
+			// Find userbean from session
+			HttpSession session = ((HttpServletRequest) request).getSession(true);
+			UserBean userBean = (UserBean)session.getAttribute(USERBEAN_ATTR);
+			if (userBean==null) {
+				System.out.println("No tenemos bean");
+				nextPage="/login.jsp";
+			} else {
+				System.out.println("Tenemos bean");
+			}
+			
+			 if (!userBean.isLoggedIn()) {
+					// Read request parameters
+				    System.out.println("no logeado recuperamos datos");
+					String username = request.getParameter(USERNAME_PARAM);
+					String password = request.getParameter(PASSWORD_PARAM);
+					System.out.println("usr:"+username+" pass:"+password);
+
+					if (username != null) {
+						System.out.println("ponemos datos");
+						// Record username and password values
+						userBean.setUsername(username);
+						userBean.setPassword(password);
+						session.setAttribute(USERBEAN_ATTR, userBean);
+						// Attempt to login
+						result = userBean.doLogin();
+						System.out.println("userbeanlogin");
+						System.out.println("nextpage"+nextPage);
+						request.getRequestDispatcher(nextPage).forward(request, response);
+						
+					}
+					if (!result) {
+						nextPage = "/login.jsp";
+					}
+				} else {
+					chain.doFilter(request, response);
+					System.out.println("dofilter");
+				}
+			
+			// request.getRequestDispatcher(nextPage).forward(request, response);
+			// System.out.println("nextpage");
+			 
+			 
+			 
+		
+
+	}
+
+	/**
+	 * @see Filter#init(FilterConfig)
+	 */
+	public void init(FilterConfig fConfig) throws ServletException {
+		// TODO Auto-generated method stub
+	}
+
+}

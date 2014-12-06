@@ -11,4 +11,3 @@ org.eclipse.team.svn.ui.panel.remote.ImportPanel.height=263
 org.eclipse.team.svn.ui.panel.remote.ImportPanel.width=525
 org.eclipse.team.svn.ui.panel.reporting.ErrorCancelPanel.height=132
 org.eclipse.team.svn.ui.panel.reporting.ErrorCancelPanel.width=640
-preference.repository.repositoryBrowser=false

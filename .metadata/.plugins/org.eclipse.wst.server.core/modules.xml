@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <modules>
   <module moduleId="org.eclipse.jst.jee.server:my_APP5" serverId="GlassFish 4.0 at localhost"/>
+  <module moduleId="org.eclipse.jst.jee.server:ISW_APP4_6" serverId="GlassFish 4.0 at localhost"/>
 </modules>
